@@ -1,0 +1,69 @@
+<%- include('../partials/header') %>
+
+<main class="container">
+  <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+    <div class="col-md-6 px-0">
+      <h2 class="blog-post-title">Most Notable Password Breaches</h2>
+    </div>
+  </div>
+
+  <div class="row g-5">
+    <div class="col-md-8">
+
+      <article class="blog-post">
+        <p class="blog-post-meta">November 24, 2021 by <a href="#">Carter Caldwell</a></p>
+        <h3>Under Armour</h3>
+        <p>150 million user accounts on MyFitnessPal app were compromised in February of 2018. </p>
+        <hr>
+        <p>In this hack, user emails, names, and hashed passwords were stolen from an Under Armour database that was compromised. It was unfortunate to have your database compromised, however, this is a known risk possibility so it is up to Under Armour to protect the data that is stored there. </p>
+        <img src="/images/fitnesspal.jpeg" alt="">
+        <br>
+        <br>
+        <p>Under Armour had decided to use the popular hashing algorithm “Bcrypt” for most of their users. This less some users exposed since the remainder were hashed using “SHA-1” algorithm. This SHA-1 algorithm was inherently insecure due to the fact that some passwords produced the same hash. As mentioned in the hashing blog, since all hashes are supposed to be unique, this allowed attackers to produce a collision attack that is much cheaper. This failure on the developer’s part led to the users with passwords in the SHA-1 hash to be much more vulnerable. Under Armour developers made the mistake of implementing an algorithm without fully researching it and learning that it was not truly secure.  </p>
+
+        <h3>Facebook</h3>
+        <p>Facebook had been storing Instagram passwords in plain text since as early as 2012</p>
+        <hr>
+        <p>The security flaw was discovered in early 2019 during a routine security inspection. Facebook had apparently been logging user data, including their passwords in plain text, and storing this information on internal Facebook servers. This is a classic developer mistake of logging sensitive information in order to debug or track status. </p>
+        <img src="/images/facebook.jpeg" alt="">
+        <br>
+        <br>
+        <p>Although Facebook had no signs of employees abusing access to this data, however this does not mean it didn’t happen. Thankfully this security vulnerability was not discovered by an attacker who had reached access to internal servers. Had this been the case, millions of Facebook users would’ve been vulnerable to having their accounts stolen. This security vulnerability has since turned into an embarrassing story for such a large tech company who prides themselves on their security of user data. </p>
+
+        <h3>LinkedIn</h3>
+        <p>LinkedIn made the mistake of not salting passwords since 2012</p>
+
+        <hr>
+        <p>In 2012, a Russian attacker was able to gain access to the LinkedIn database and expose the records of millions of users. This hacker first posted the stolen information for a few million users on a website, but it was not until 4 years later when they posted the entire database of usernames and passwords on a password-cracking forum. On this forum, people were able to see the usernames and hashed passwords to try to de-hash them. </p>
+        <img src="/images/linkedin.jpeg" alt="">
+        <br>
+        <br>
+        <p>This is where LinkedIn becomes at fault. LinkedIn had been storing their user passwords using a weak encryption (SHA-1) which is mentioned previously in the Under Armour article. The combination of this weak hashing and the lack of salting user passwords made it incredibly easy for attackers to crack the passwords of millions of users. This led to salaries, addresses, and other personal information to be exposed. LinkedIn also made the mistake of not requiring users to change their password once they did implement salting user passwords after 2012. This left those who had older accounts more vulnerable to attacks. </p>
+
+
+        <h3>Conclusion</h3>
+        <hr>
+        <p>These are only a couple massive companies who had made basic mistakes in incorrectly storing user passwords. Their mistakes led to millions of users being exposed to having their data leaked to malicious attackers. If you are curious if you were ever caught in the crossfire of one of these attacks, check out the following link: </p>
+
+        <a href="https://haveibeenpwned.com">https://haveibeenpwned.com</a>
+        <br>
+        <br>
+        <p>Cyber security is a critical component of any successful company but time after time, developers make the same mistakes with passwords. Thankfully there is a trend shifting away from passwords towards other types of authentication. But for now, passwords won’t be going anywhere. This is why it is important to have a strong one (or many strong ones)! </p>
+      </article>
+
+
+    </div>
+
+    <%- include('../partials/sidebar') %>
+
+  </div>
+
+</main>
+
+<%- include('../partials/footer') %>
+
+
+
+
+  </body>
+</html>

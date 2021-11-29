@@ -11,6 +11,21 @@ app.get("/", function(req, res) {
 });
 
 
+app.get("/hashing", function(req, res) {
+  res.render("hashing")
+});
+
+
+app.get("/breaches", function(req, res) {
+  res.render("breaches")
+});
+
+
+app.get("/improving", function(req, res) {
+  res.render("improving")
+});
+
+
 
 //Local Port for development
 app.listen(3000, function () {

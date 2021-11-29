@@ -1,0 +1,46 @@
+<%- include('../partials/header') %>
+
+<main class="container">
+  <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+    <div class="col-md-6 px-0">
+      <h2 class="blog-post-title">A Brief History of Passwords</h2>
+    </div>
+  </div>
+
+  <div class="row g-5">
+    <div class="col-md-8">
+
+      <article class="blog-post">
+        <p class="blog-post-meta">November 24, 2021 by <a href="#">Carter Caldwell</a></p>
+
+        <p>The history of password protection is quite brief but has been used for thousands of years. The first use of passwords can be traced back to the Roman military where guards were given “watchwords”. These watchwords would allow a person to pass through. </p>
+        <img src="/images/watchwords.jpeg" alt="">
+        <p>This eventually evolved to passwords and counter-passwords in the military. These would be changed every couple of days as the protection of information was a deciding factor in wars like WWI. Encryption was another important way to keep messages secure, however it will not be covered in as much detail in this blog. </p>
+        <hr>
+        <h3>First Computer Password</h3>
+        <p>Computer security started as physical security when they were closer to calculators than computers.  In 1961, MIT’s creation of the Compatible Time-Sharing System (CTSS) was met with the need for passwords.  The first password “breach” on one of these shared mainframe computers actually came from a user who wanted more time on the machine and stole his colleagues’ credentials. This would eventually lead to Robert Morris hashing passwords in a UNIX system in the 1970s. Since this innovation, password evolution has been relatively stagnant, only changing hashing algorithms and methods of choosing passwords. </p>
+        <img src="/images/ctss.jpeg" alt="">
+        <br>
+
+        <br>
+        <h3>Passwords today</h3>
+        <p>The current state of password security depends mostly on computing power. Discussed further in password hashing, the more computing power an attacker has, the better equipped they are to hack a password. However, new algorithms are developed in tandem to keep these attackers at bay. </p>
+
+
+        <h3>Future of passwords</h3>
+
+        <p>The future of passwords is most likely with validating users with other methods. Already, we see the evolution of Touch ID and Face ID in Apple devices. Unfortunately, passwords just aren’t as secure today as they were in the past. This is sparking new innovation in authentication techniques that is deviating from the concept of storing passwords. </p>
+        <img src="/images/face_touch_id.png" alt="">
+      </article>
+    </div>
+
+    <%- include('../partials/sidebar') %>
+
+  </div>
+
+</main>
+
+<%- include('../partials/footer') %>
+
+  </body>
+</html>

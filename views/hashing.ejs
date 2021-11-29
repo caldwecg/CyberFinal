@@ -1,0 +1,55 @@
+<%- include('../partials/header') %>
+
+<main class="container">
+  <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+    <div class="col-md-6 px-0">
+      <h2 class="blog-post-title">Hashing</h2>
+    </div>
+  </div>
+
+  <div class="row g-5">
+    <div class="col-md-8">
+
+      <article class="blog-post">
+        <p class="blog-post-meta">November 24, 2021 by <a href="#">Carter Caldwell</a></p>
+        <h3>What is hashing?</h3>
+        <p>Hashing is the process of turning your plain text password into an encrypted string of characters that is difficult to decode. Plain text passwords are ones that undergo no encryption transformation and are extremely vulnerable when stored in a database. Many companies still make the mistake of storing user passwords in plain text, causing sensitive user information to inevitably be leaked once attacked. </p>
+        <hr>
+        <p>An important aspect of hashing is making sure two different passwords do not generate the same hash. Since user passwords are never stored, only the hashed version, we check the user input against hashed version of their password. This could cause trouble if a user is able to input a different password that would still generate the same hash, allowing them access to the system.  </p>
+        <h3>How it is done</h3>
+        <p>Hashing is designed to be easy and fast going forwards to create the hashed password, but very complex and expensive in order to undo the hash. Since computing power has changed over the years, some hashing algorithms have gotten easier to crack. Due to this, the algorithms that create these hashed passwords are also changing over the years. MD5 was a very common hashing algorithm that is still commonly used, but is weak due to how fast it is. This means that attackers are able to hash millions of possible passwords into MD5 hashes very quickly in order to build hash tables (explained further below). Now, common algorithms are SHA-256 and SHA-3. Bcrypt is another commonly used and strong password hashing algorithm. </p>
+
+
+        <h3>How hashing is hacked</h3>
+        <p>Hashing is primarily done in order to prevent user passwords to be exposed once the database has been breached. Let’s say a company’s database has been taken over and the attackers now have access to all the user’s login information and hashed password. If the passwords were not hashed, the attackers would be able to immediately steal all sensitive user information. In this case, let’s say the passwords have been hashed. </p>
+        <p>The first step would be for the attackers to build a hash table. This table is built by running the hashing algorithm on plain text passwords and comparing the generated hash to the hash stored in the database. If there is a match, the attacker is able to look back at the plain text that generated the hashed password match and see the user’s password. Since it is more computationally expensive for the attacker to generate hashes for every longer and more complex password combination, they will likely not be able to discover your strong password. </p>
+
+        <p>This is a simplified example of how even hashed passwords are vulnerable to attacks. One thing that will make these passwords stronger is something called salting. </p>
+        <h3>What is Salting? </h3>
+        <p>Salting is the process of adding a known string to the user’s password before hashing it in order to make a more complex hash. Many short and frequently used passwords are still vulnerable to being hacked, even after hashing. Salting these passwords make them more complex and generate a much more difficult hash to crack. </p>
+        <img src="/images/salting.png" alt="" style="width:900px;height:800px;">
+        <p>In the picture above, the string “3ab9” is added to the end of “hello”. This creates a hash much more computationally difficult to crack than just the password “hello”. </p>
+      </article>
+
+
+    </div>
+
+    <div class="col-md-4">
+      <div class="position-sticky" style="top: 2rem;">
+        <div class="p-4 mb-3 bg-light rounded">
+          <h4 class="fst-italic">About</h4>
+          <p class="mb-0">Customize this section to tell your visitors a little bit about your publication, writers, content, or something else entirely. Totally up to you.</p>
+        </div>
+
+        <%- include('../partials/sidebar') %>
+
+  </div>
+
+</main>
+
+<%- include('../partials/footer') %>
+
+
+
+  </body>
+</html>
