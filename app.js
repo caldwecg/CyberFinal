@@ -28,6 +28,10 @@ app.get("/improving", function(req, res) {
 
 
 //Local Port for development
-app.listen(3000, function () {
-    console.log("App is listening on port 3000");
+const PORT = process.env.PORT || 3000;
+
+
+//Local Port for development
+app.listen(PORT, function () {
+    console.log('App is listening on port ${PORT}');
 })
